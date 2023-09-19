@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <font face="Comic Sans MS" color="Green">
+            <H1>Notas 3.0</H1>
+            <p>Nome do Aluno:<span id="nomea"></span></p>
+            <p>Nome do Professor: <span id="nomep"></span></p>
+            <p>Nota 1:<span id="nota1"></span></p>
+            <p>Nota 2:<span id="nota2"></span></p>
+            <p>Nota 3:<span id="nota3"></span></p>
+            <p>Média:<span id="media"></span></p>
+            <p>Resultado:<span id="resultado"></span></p>
+        </font>
+    </center>
+    <script>
+
+        let na = prompt("Digite o nome do Aluno: ");
+        let np = prompt("Digite o nome do Professor: ");
+        let n1 = prompt("Digite sua nota 1: ");
+        let n2 = prompt("Digite sua nota 2: ");
+        let n3 = prompt("Digite sua nota 3: ");
+        let media = 0;
+        let resultado = ""
+        media = ((parseInt(n1) + parseInt(n2) + parseInt(n3)) / 3).toFixed(2);
+
+        if (media < 4)
+            resultado = "Aluno retido"
+        else if (media < 7)
+            resultado = "Aluno em recuperação"
+        else if (media < 11)
+            resultado = "Aluno aprovado"
+        else
+            resultado = "Resultado inesperado"
+        document.getElementById("nota1").innerHTML = " " + n1
+        document.getElementById("nota2").innerHTML = " " + n2
+        document.getElementById("nota3").innerHTML = " " + n3
+        document.getElementById("nomea").innerHTML = " " + na
+        document.getElementById("nomep").innerHTML = " " + np
+        document.getElementById("media").innerHTML = " " + media
+        document.getElementById("resultado").innerHTML = " " + resultado
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
